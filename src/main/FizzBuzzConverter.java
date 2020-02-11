@@ -28,11 +28,19 @@ public class FizzBuzzConverter {
     }
     
     public Boolean isMultipleOf3(Integer number) {
-    	return number % 3 == 0;
+    	return isMultipleOfNumber(number,3);
     }
     
     public Boolean isMultipleOf5(Integer number) {
-    	return number % 5 == 0;
+    	return isMultipleOfNumber(number,5);
+    }
+    
+    public Boolean isMultipleOf15(Integer number) {
+    	return isMultipleOfNumber(number,15);
+    }
+    
+    public Boolean isMultipleOfNumber(Integer number, Integer multiple) {
+    	return number % multiple == 0;
     }
 
 }
