@@ -9,7 +9,7 @@ public class FizzBuzzConverter {
     }
 	
     public String generateFizzBuzz(Integer number) {
-        if (number % 3 == 0 && number % 5 == 0)
+        if (isMultipleOf3(number) && number % 5 == 0)
 			{
 				return "FizzBuzz";                    
 			}
