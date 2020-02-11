@@ -14,7 +14,7 @@ public class FizzBuzzConverter {
 				return "FizzBuzz";                    
 			}
 			else 
-				if(number % 3 == 0)
+				if(isMultipleOf3(number))
 				{
 					return"Fizz";
 				}
@@ -25,6 +25,14 @@ public class FizzBuzzConverter {
 					}
 					else
 						return String.valueOf(number);
+    }
+    
+    public Boolean isMultipleOf3(Integer number) {
+    	Boolean answer = false;
+        if (number % 3 == 0) {
+            answer = true;                    
+        }
+        return answer;
     }
     
 }
