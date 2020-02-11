@@ -29,6 +29,7 @@ class FizzBuzzConverterTest {
 		assertTrue(fizzBuzzConverter.isMultipleOf3(9));
 	}
 	
+	@Test
 	void testIsMultipleOf5() {
 		assertTrue(fizzBuzzConverter.isMultipleOf5(0));
 		assertFalse(fizzBuzzConverter.isMultipleOf5(1));
@@ -43,25 +44,27 @@ class FizzBuzzConverterTest {
 		assertTrue(fizzBuzzConverter.isMultipleOf5(10));
 	}
 	
+	@Test
 	void testIsMultipleOf15() {
-		assertTrue(fizzBuzzConverter.isMultipleOf15(1));
+		assertFalse(fizzBuzzConverter.isMultipleOf15(1));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(2));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(3));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(4));
-		assertTrue(fizzBuzzConverter.isMultipleOf15(5));
+		assertFalse(fizzBuzzConverter.isMultipleOf15(5));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(6));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(7));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(8));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(9));
-		assertTrue(fizzBuzzConverter.isMultipleOf15(10));
+		assertFalse(fizzBuzzConverter.isMultipleOf15(10));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(11));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(12));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(13));
 		assertFalse(fizzBuzzConverter.isMultipleOf15(14));
 		assertTrue(fizzBuzzConverter.isMultipleOf15(15));
 	}
+	
+	@Test
 	void testIsMultipleOfNumber() {
-		assertTrue(fizzBuzzConverter.isMultipleOfNumber(0,0));
 		assertTrue(fizzBuzzConverter.isMultipleOfNumber(2,2));
 		assertTrue(fizzBuzzConverter.isMultipleOfNumber(4,2));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(5,2));
@@ -94,17 +97,54 @@ class FizzBuzzConverterTest {
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(2,15));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(3,15));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(4,15));
-		assertTrue(fizzBuzzConverter.isMultipleOfNumber(5,15));
+		assertFalse(fizzBuzzConverter.isMultipleOfNumber(5,15));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(6,15));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(7,15));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(8,15));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(9,15));
-		assertTrue(fizzBuzzConverter.isMultipleOfNumber(10,15));
+		assertFalse(fizzBuzzConverter.isMultipleOfNumber(10,15));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(11,15));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(12,15));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(13,15));
 		assertFalse(fizzBuzzConverter.isMultipleOfNumber(14,15));
 		assertTrue(fizzBuzzConverter.isMultipleOfNumber(15,15));
+	}
+	
+	@Test
+	void testIsFizz() {
+		assertTrue(fizzBuzzConverter.isFizz(3));
+		assertFalse(fizzBuzzConverter.isFizz(2));
+		assertFalse(fizzBuzzConverter.isFizz(4));
+		assertFalse(fizzBuzzConverter.isFizz(7));
+		assertTrue(fizzBuzzConverter.isFizz(15));
+		assertTrue(fizzBuzzConverter.isFizz(18));
+		assertTrue(fizzBuzzConverter.isFizz(21));
+	}
+	
+	@Test
+	void testIsBuzz() {
+		assertTrue(fizzBuzzConverter.isBuzz(5));
+		assertFalse(fizzBuzzConverter.isBuzz(6));
+		assertFalse(fizzBuzzConverter.isBuzz(7));
+		assertFalse(fizzBuzzConverter.isBuzz(8));
+		assertTrue(fizzBuzzConverter.isBuzz(10));
+		assertTrue(fizzBuzzConverter.isBuzz(15));
+		assertTrue(fizzBuzzConverter.isBuzz(20));
+		assertTrue(fizzBuzzConverter.isBuzz(25));
+		assertFalse(fizzBuzzConverter.isBuzz(21));
+	}
+	
+	@Test
+	void testIsNotFizzAndIsNotBuzz() {
+		assertTrue(fizzBuzzConverter.isNotFizzAndIsNotBuzz(1));
+		assertTrue(fizzBuzzConverter.isNotFizzAndIsNotBuzz(2));
+		assertTrue(fizzBuzzConverter.isNotFizzAndIsNotBuzz(4));
+		assertTrue(fizzBuzzConverter.isNotFizzAndIsNotBuzz(7));
+		assertTrue(fizzBuzzConverter.isNotFizzAndIsNotBuzz(8));
+		assertTrue(fizzBuzzConverter.isNotFizzAndIsNotBuzz(11));
+		assertTrue(fizzBuzzConverter.isNotFizzAndIsNotBuzz(13));
+		assertTrue(fizzBuzzConverter.isNotFizzAndIsNotBuzz(14));
+
 	}
 
 }

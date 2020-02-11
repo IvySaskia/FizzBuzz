@@ -4,27 +4,25 @@ public class FizzBuzzConverter {
 	
     public void generateMultipleFizzBuzz() {
         for (Integer i = 0; i < 100 ; i++) {
-            System.out.println(generateFizzBuzz(i));
+            System.out.println(generate(i));
         }
     }
 	
-    public String generateFizzBuzz(Integer number) {
-        if (isMultipleOf3(number) && isMultipleOf5(number))
-			{
-				return "FizzBuzz";                    
-			}
-			else 
-				if(isMultipleOf3(number))
-				{
-					return"Fizz";
-				}
-				else 
-					if(isMultipleOf5(number))
-					{
-						return "Buzz";
-					}
-					else
-						return String.valueOf(number);
+    public String generate(Integer number) {
+    	
+    	String value = "";
+    	
+    	if(isFizz(number)) {
+    		value="Fizz";
+    	}
+		if(isBuzz(number)) {
+			value+="Buzz";
+		}
+		if(isNotFizzAndIsNotBuzz(number)){
+			value = String.valueOf(number);
+		}
+		
+		return value;
     }
     
     public Boolean isMultipleOf3(Integer number) {
@@ -41,6 +39,18 @@ public class FizzBuzzConverter {
     
     public Boolean isMultipleOfNumber(Integer number, Integer multiple) {
     	return number % multiple == 0;
+    }
+    
+    public Boolean isFizz(Integer number) {
+    	return isMultipleOf3(number);
+    }
+    
+    public Boolean isBuzz(Integer number) {
+    	return isMultipleOf5(number);
+    }
+    
+    public Boolean isNotFizzAndIsNotBuzz(Integer number) {
+    	return !isFizz(number) && !isBuzz(number);
     }
 
 }
