@@ -28,11 +28,7 @@ public class FizzBuzzConverter {
     }
     
     public Boolean isMultipleOf3(Integer number) {
-    	Boolean answer = false;
-        if (number % 3 == 0) {
-            answer = true;                    
-        }
-        return answer;
+    	return number % 3 == 0;
     }
-    
+
 }

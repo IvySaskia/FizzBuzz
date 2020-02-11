@@ -11,7 +11,7 @@ class FizzBuzzConverterTest {
 	
 	@BeforeAll
 	public static void beforeAll() {
-		System.out.println("Antes de todas");
+		System.out.println("Before all");
 		fizzBuzzConverter = new FizzBuzzConverter();
 	}
 	
