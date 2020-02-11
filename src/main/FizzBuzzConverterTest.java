@@ -28,5 +28,20 @@ class FizzBuzzConverterTest {
 		assertFalse(fizzBuzzConverter.isMultipleOf3(8));
 		assertTrue(fizzBuzzConverter.isMultipleOf3(9));
 	}
+	
+	void testIsMultipleOf5() {
+		assertTrue(fizzBuzzConverter.isMultipleOf5(0));
+		assertFalse(fizzBuzzConverter.isMultipleOf5(1));
+		assertFalse(fizzBuzzConverter.isMultipleOf5(2));
+		assertFalse(fizzBuzzConverter.isMultipleOf5(3));
+		assertFalse(fizzBuzzConverter.isMultipleOf5(4));
+		assertTrue(fizzBuzzConverter.isMultipleOf5(5));
+		assertFalse(fizzBuzzConverter.isMultipleOf5(6));
+		assertFalse(fizzBuzzConverter.isMultipleOf5(7));
+		assertFalse(fizzBuzzConverter.isMultipleOf5(8));
+		assertFalse(fizzBuzzConverter.isMultipleOf5(9));
+		assertTrue(fizzBuzzConverter.isMultipleOf5(10));
+
+	}
 
 }
